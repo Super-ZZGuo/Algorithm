@@ -2,14 +2,20 @@ package sort;
 
 /**
  * @Author zzguo
- * @Description 快排
+ * @Description 快排 简单的递归方法
  **/
 public class QuickSort {
     public static void main(String[] args) {
-        int[] arr = new int[]{0,0,2,3,2,1,1,2,0,4};
-        quickSort(arr, 0, arr.length - 1);
-        for(int num : arr) System.out.println(num);
-        // return Arrays.copyOf(arr,k);
+        int[] num = new int[]{3,5,6,1,5,2,77,1,76,1003,2,1,66};
+        System.out.print("Before quickSort:");
+        for(int n:num) System.out.print(n + " ");
+        System.out.println();
+
+        quickSort(num, 0, num.length - 1);
+
+        System.out.print("After quickSort:");
+        for(int n:num) System.out.print(n + " ");
+        System.out.println();
     }
 
     public static void quickSort(int[] arr, int l, int r){
