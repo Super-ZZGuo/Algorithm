@@ -27,8 +27,8 @@ public class ShellSort {
             for(int i = step; i < len; i++) {
                 temp = num[i];
                 int j = i - step;
-                // 向左有序队列中查找比 temp 小的
-                while (j >= 0 && num[j] > temp) {
+                // 向左查找比temp小的数
+                while(j >= 0 && num[j] > temp) {
                     num[j + step] = num[j];
                     j -= step;
                 }
